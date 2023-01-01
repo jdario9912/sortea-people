@@ -1,13 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { appContext } from '../app';
 
 const VerParticipantes = ({ participantes, eliminar }) => {
-  
+  const { verLista } = useContext(appContext);
+  console.log(verLista);
   if (participantes.length > 0) {
     return(
-      <div className='ver-participantes-container lista'>
+      <div className={ verLista ? 'ver-participantes-container' : 'hidden'}>
         {
           participantes.map(participante => 
-            <span key={ participante } onClick={ eliminar } className='lista-nombre'>{participante}</span>  
+            <span 
+              key={ participante } 
+              onClick={ eliminar } 
+              className='lista-nombre'
+            >
+              { participante }
+            </span>  
           )
         }
       </div>

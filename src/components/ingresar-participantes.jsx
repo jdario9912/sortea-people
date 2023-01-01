@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { createContext, useContext } from 'react';
+import Form from './form';
 import VerParticipantes from './ver-participantes';
+import { appContext } from '../app';
+
+export const FormContext = createContext();
 
 const IngresarParticipantes = () => {
 
-  const [participantes, setParticipantes] = useState([]);
+  const { participantes, setParticipantes } = useContext(appContext);
 
   let 
     nuevoParticipante,
@@ -39,13 +43,9 @@ const IngresarParticipantes = () => {
     <div className='ingresar-participantes-container'>
       <div className='ingresar-participantes'>
         <h2 className='ingresar-h2'>Ingresar participantes</h2>
-        <form action="" className='ingresar-form'>
-          <input type="text" placeholder='Nombre del participante' className='ingresar-form-input' data-participante />
-          <div className="ingresar-container-button">
-            <button onClick={ handleIngresar } className='ingresar-form-button button-ingresar' >ingresar</button>
-            <button onClick={ resetStorage } className='ingresar-form-button button-resetear'>reset lista</button>
-          </div>
-        </form>   
+        <FormContext.Provider value={{ handleIngresar, resetStorage}}>
+          <Form />   
+        </FormContext.Provider>
       </div>
       <VerParticipantes participantes={ participantes } eliminar={ eliminarParticipante } />
     </div>

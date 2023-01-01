@@ -25,7 +25,9 @@ code {
   flex-direction: column;
   font-size: calc(10px + 2vmin);
   min-height: 100vh;
+  box-sizing: border-box;
   padding: 1rem;
+  position: relative;
 }
 
 .ingresar-participantes-container{
@@ -64,19 +66,27 @@ code {
   justify-content: space-evenly;
 }
 
-.ingresar-container-button .ingresar-form-button{
+.ingresar-container-button .ingr-form-btn{
   width: 45%;
   height: 1.5rem;
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.862);
 }
 
-.button-ingresar{
+.btn-ingresar{
   background-color: green;
 }
 
-.button-resetear{
+.btn-ingresar:active{
+  background-color: white;
+}
+
+.btn-resetear{
   background-color: red;
+}
+
+.btn-resetear:active{
+  background-color: white;
 }
 
 .ver-participantes-container{
@@ -84,9 +94,8 @@ code {
   border-radius: 15px;
   padding: 1rem;
   max-width: 440px;
-}
-
-.lista{
+  max-height: 45vh;
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -105,6 +114,36 @@ code {
 
 .mensaje{
   text-align: center;
+}
+
+.sortear-container-btn{
+  display: flex;
+  border: 1px solid rgba(255, 255, 255, 0.862);
+  border-radius: 15px;
+  padding: 1rem;
+  gap: 1rem;
+  max-width: 335px;
+  position: absolute;
+  bottom: 2rem;
+  max-height: 4rem;
+}
+
+.btn-sortear{
+  background-color: yellowgreen;
+  height: 1.5rem;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.862);
+}
+
+.btn-sortear-eliminar{
+  background-color: orange;
+  height: 1.5rem;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.862);
+}
+
+.hidden{
+  display: none;
 }
 
 @media only screen and (max-width: 600px) { }
