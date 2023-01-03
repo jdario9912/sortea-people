@@ -8,6 +8,7 @@ const Input = () => {
         placeholder='Nombre del participante' 
         className='ingresar-form-input' 
         data-participante 
+        autoFocus
       />      
     </>
   );

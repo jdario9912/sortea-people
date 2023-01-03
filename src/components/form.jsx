@@ -12,8 +12,8 @@ const Form = () => {
     <form action="" className='ingresar-form'>
       <Input />
       <div className="ingresar-container-button">
-        <Button props={ new Buttons(handleIngresar, 'ingr-form-btn btn-ingresar', 'ingresar')} />
-        <Button props={ new Buttons(resetStorage, 'ingr-form-btn btn-resetear', 'resetear')} />
+        <Button props={ new Buttons(handleIngresar, 'ingr-form-btn', 'agregar')} />
+        <Button props={ new Buttons(resetStorage, 'ingr-form-btn', 'resetear')} />
       </div>
     </form>
   );
