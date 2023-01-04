@@ -1,31 +1,32 @@
-import React, { useContext } from 'react';
+import React, {
+  useEffect,
+  useContext
+} from 'react';
 import { appContext } from '../app';
-import Sorteado from './sorteado';
 
-const VerParticipantes = ({ participantes, eliminar }) => {
-  const { verLista, sorteado } = useContext(appContext);
+const VerParticipantes = () => {
+  const { setParticipantes, participantes, eliminar } = useContext(appContext);
+
+  useEffect(() => {
+    setParticipantes(Object.values(window.sessionStorage));
+  }, []);
+
   if (participantes.length > 0) {
-    if (verLista) {
-      return(
-        <div className='ver-participantes-container'>
-          {
-            participantes.map(participante => 
-              <span 
-                key={ participante } 
-                onClick={ eliminar } 
-                className='lista-nombre'
-              >
-                { participante }
-              </span>  
-            )
-          }
-        </div>
-      )
-    } else {
-      return(
-        <Sorteado sorteado={ sorteado } />
-      ); 
-    }
+    return(
+      <div className='ver-participantes-container'>
+        {
+          participantes.map(participante => 
+            <span 
+              key={ participante } 
+              onClick={ eliminar } 
+              className='lista-nombre'
+            >
+              { participante }
+            </span>  
+          )
+        }
+      </div>
+    )
   } else {
     return (
       <div className='ver-participantes-container'>
