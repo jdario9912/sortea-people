@@ -1,7 +1,5 @@
 import React, { useContext } from 'react';
 import { appContext } from '../app';
-import { Buttons } from '../models/buttons';
-import Button from './button';
 
 const Sortear = () => {
   const { participantes, setVerLista, verLista, setSorteado } = useContext(appContext);
@@ -17,7 +15,8 @@ const Sortear = () => {
 
   return (
     <div className='sortear-container-btn'>
-      <Button props={ new Buttons(sortear, 'btn-sortear', 'sortear')} />
+      <a href="/sorteo" className='btn-sortear'>sortear</a>
+      {/* <Button props={ new Buttons(sortear, 'btn-sortear', 'sortear')} /> */}
     </div>
   );
 }

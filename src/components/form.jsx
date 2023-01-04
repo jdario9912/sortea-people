@@ -6,10 +6,13 @@ import { FormContext } from './ingresar-participantes';
 
 
 const Form = () => {
-  const { handleIngresar, resetStorage } = useContext(FormContext);
+  const { 
+    handleIngresar, 
+    resetStorage,
+  } = useContext(FormContext);
   
   return (
-    <form action="" className='ingresar-form'>
+    <form className='ingresar-form'>
       <Input />
       <div className="ingresar-container-button">
         <Button props={ new Buttons(handleIngresar, 'ingr-form-btn', 'agregar')} />

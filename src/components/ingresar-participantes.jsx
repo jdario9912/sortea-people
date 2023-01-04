@@ -1,13 +1,12 @@
 import React, { createContext, useContext } from 'react';
 import Form from './form';
-import VerParticipantes from './ver-participantes';
 import { appContext } from '../app';
 
 export const FormContext = createContext();
 
 const IngresarParticipantes = () => {
 
-  const { participantes, setParticipantes } = useContext(appContext);
+  const { setParticipantes } = useContext(appContext);
 
   let 
     nuevoParticipante,
@@ -23,15 +22,10 @@ const IngresarParticipantes = () => {
       setParticipantes(nombres);
       nuevoParticipante.value = '';
       nuevoParticipante.focus();
-      return;
+    }else{
+      console.log('no se encontro valor');
     }
   };
-
-  const eliminarParticipante = (e) => {
-    sessionStorage.removeItem(e.target.innerHTML);
-    nombres = Object.values(window.sessionStorage);
-    setParticipantes(nombres);
-  }
 
   const resetStorage = (e) => {
     e.preventDefault();
@@ -42,12 +36,11 @@ const IngresarParticipantes = () => {
   return (
     <div className='ingresar-participantes-container'>
       <div className='ingresar-participantes'>
-        <h2 className='ingresar-h2'>Ingresar participantes</h2>
+        <h2 className='ingresar-h2'>amigo invisible</h2>
         <FormContext.Provider value={{ handleIngresar, resetStorage}}>
           <Form />   
         </FormContext.Provider>
       </div>
-      <VerParticipantes participantes={ participantes } eliminar={ eliminarParticipante } />
     </div>
   );
 }
