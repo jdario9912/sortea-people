@@ -1,8 +1,7 @@
-import React, {
-
-} from 'react';
+import React from 'react';
 import { Amigos } from '../models/amigos';
-import '../styles/amigos-invisibles.css'
+import '../styles/sorteo.css';
+import { GiInvisible } from "react-icons/gi";
 
 const Sorteo = () => {
   const amigosInvisibles = [];
@@ -22,46 +21,37 @@ const Sorteo = () => {
   });
 
   return (
-    <div>
+    <div className='amigos-invisibles-container'>
       <a href="/">home</a>
-      <table className='amigos-invisibles'>
-        <thead>
-          <tr>
-            <th>Entrega</th>
-            <th>Recibe</th>
-          </tr>
-        </thead>
-        <tbody>
+      <GiInvisible className='icono-invisible' />
+      <div className="amigos-invisibles">
+        <div className="tmain">
+          <div className="thead">Entrega</div>
+          <div>
           {
-            amigosInvisibles.map(({entrega, recibe}) => 
-              <tr key={ entrega }>
-                <td>{entrega}</td>
-                <td>{recibe}</td>
-              </tr>
+            amigosInvisibles.map(({entrega}) => 
+              <p className="nombre" key={entrega}>
+                { entrega }
+              </p>
             )
           }
-        </tbody>
-        
-      </table>
-      
+          </div>
+        </div>
+        <div className="tmain">
+          <div className="thead">Recibe</div>
+          <div>
+          {
+            amigosInvisibles.map(({recibe}) => 
+              <p className="nombre" key={recibe}>
+                { recibe }
+              </p>
+            )
+          }
+          </div>
+        </div>
+      </div>      
     </div>
   );
 }
 
 export default Sorteo;
-
-// const random = Math.floor(Math.random() * amigos.length);
-//     if(participante !== amigos[random]){
-//       amigosInvisibles.push( new Amigos(participante, amigos[random]));
-//       console.log('antes de borrar', amigos.length);
-//       delete(amigos[random]);
-
-//       console.log('despues de borrar', amigos.length);
-      
-      
-      
-      
-      
-//     }else{
-//       console.log('Salio igual: ', participante);
-//     }

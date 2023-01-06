@@ -4,4 +4,68 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  color: white;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.help-icon{
+  color: var(--verde);
+  font-size: 2rem;
+}
+
+.help-container h2{
+  font-family: 'Supersonic';
+  letter-spacing: 4px;
+  font-size: 2rem;
+}
+
+.help-container p{
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.help-container p::before{
+  content: '👻 ';
+  font-size: small;
+}
+
+.help-container i{
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.help-container a{
+  color: var(--verde);
+  margin-top: 40px;
+}
+
+.help-container a:active{
+  color: white;
+}
+
+@media only screen and (min-width: 768px) { 
+  .help-icon{
+    font-size: 7rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .help-container a {
+    text-decoration: none;
+    border: 1px solid var(--verde);
+    border-radius: 5px;
+    padding: 1rem 3rem;
+  }
+
+  .help-container a:hover{
+    background-color: var(--verde);
+    color: white;
+  }
+
+  .help-container a:active{
+    background-color: var(--violeta);
+  }
 }

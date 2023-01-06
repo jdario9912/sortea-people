@@ -244,5 +244,18 @@ body {
   text-transform: capitalize;
 }
 
-@media only screen and (max-width: 600px) { }
+@media only screen and (min-width: 768px) { 
+  .app{
+    padding: 3rem;
+  }
 
+  .help{
+    right: 3rem;
+  }
+}
+
+@media only screen and (min-width: 992px) { 
+  .help{
+    font-size: 1.5rem;
+  }
+}
