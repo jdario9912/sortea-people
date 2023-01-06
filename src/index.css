@@ -1,19 +1,24 @@
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Comfortaa', sans-serif;
   background: url('./img/bg-app.jpg') repeat center / cover;
 }
 
 :root{
   --cyan: #61dafb;
   --negro: #282c34;
-  --violeta: rgb(135 7 157);
-  --verde: chartreuse;
+  --primario: #87079d;
+  --distintivo: #F08F13;
 }
 
 @font-face{
   font-family: 'Supersonic';
   src: url("./fonts/Supersonic\ Rocketship.ttf");
+}
+
+@font-face{
+  font-family: 'Comfortaa';
+  src: url("./fonts/Comfortaa-Bold.ttf");
 }
 
 .app {
@@ -25,7 +30,6 @@ body {
   min-height: 100vh;
   box-sizing: border-box;
   padding: 1rem;
-  /* position: relative; */
 }
 
 .help{
@@ -66,6 +70,17 @@ body {
   to { text-shadow: 0 0 6px rgba(266,266,266,0.6) }
 }
 
+.ingresar-sortear-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ingresar-participantes-container{
+  display: flex;
+  flex-direction: column;
+}
+
 .ingresar-form{
   display: flex;
   flex-direction: column;
@@ -83,16 +98,16 @@ body {
 .ingresar-form-input{
   height: 2rem;
   background-color: transparent;
-  color: var(--verde);
+  color: var(--distintivo);
   font-size: 1rem;
-  border: 1px solid var(--violeta);
+  border: 1px solid var(--primario);
   border-radius: 5px;
   font-weight: 500;
   width: 100%;
 }
 
 .ingresar-form-input:focus{
-  outline: 2px solid var(--violeta);
+  outline: 2px solid var(--primario);
 }
 
 .ingresar-container-button{
@@ -104,15 +119,16 @@ body {
   width: 45%;
   color: white;
   border: none;
+  font-family: 'Comfortaa';
   font-size: 14px;
-  font-weight: 600;
+  font-weight: lighter;
   letter-spacing: 2px;
   text-transform: uppercase;
   background-color: transparent;
 }
 
 .ingr-form-btn:active{
-  color: var(--violeta);
+  color: var(--primario);
 }
 
 .ingresar-container-button .ingr-form-btn:active {
@@ -154,17 +170,20 @@ body {
 
 .sortear-container-btn{
   padding: 20% 0;
+  display: flex;
+  justify-content: center;
 }
 
 .btn-sortear {
   padding: 10px 20px;
   border-radius: 7px;
-  border: 1px solid var(--violeta);
+  border: 1px solid var(--primario);
   font-size: 1rem;
+  font-family: 'Supersonic';
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 2px;
-  background: transparent;
+  background: var(--primario);
   color: #fff;
   overflow: hidden;
   box-shadow: 0 0 0 0 transparent;
@@ -176,7 +195,6 @@ body {
 }
 
 .btn-sortear:hover {
-  background: var(--violeta);
   box-shadow: 0 0 30px 5px rgba(228, 0, 236, 0.815);
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
@@ -234,16 +252,6 @@ body {
   content: '!';
 }
 
-.sorteado{
-  color: yellow;
-  font-weight: 800;
-  border: 1px solid white;
-  padding: 1rem;
-  border-radius: 15px;
-  margin-top: 2rem;
-  text-transform: capitalize;
-}
-
 @media only screen and (min-width: 768px) { 
   .app{
     padding: 3rem;
@@ -252,10 +260,34 @@ body {
   .help{
     right: 3rem;
   }
+
+  .ingresar-h2{
+    font-size: 4rem;
+    margin-top: 2rem;
+  }
+
+  .btn-sortear{
+    padding: 2rem 4rem;
+    font-size: 2rem;
+  }
 }
 
 @media only screen and (min-width: 992px) { 
   .help{
     font-size: 1.5rem;
+  }
+
+  .ingresar-participantes-container{
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .ingresar-participantes{
+    width: 100%;
+  }
+  
+  .ver-participantes-container{
+    margin-top: 10vh;
   }
 }

@@ -27,7 +27,7 @@ const Sorteo = () => {
       <div className="amigos-invisibles">
         <div className="tmain">
           <div className="thead">Entrega</div>
-          <div>
+          <div className='nombres'>
           {
             amigosInvisibles.map(({entrega}) => 
               <p className="nombre" key={entrega}>
@@ -39,7 +39,7 @@ const Sorteo = () => {
         </div>
         <div className="tmain">
           <div className="thead">Recibe</div>
-          <div>
+          <div className='nombres'>
           {
             amigosInvisibles.map(({recibe}) => 
               <p className="nombre" key={recibe}>

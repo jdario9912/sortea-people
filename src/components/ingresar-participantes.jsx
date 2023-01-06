@@ -36,7 +36,6 @@ const IngresarParticipantes = () => {
   return (
     <div className='ingresar-participantes-container'>
       <div className='ingresar-participantes'>
-        <h2 className='ingresar-h2'>amigo invisible</h2>
         <FormContext.Provider value={{ handleIngresar, resetStorage}}>
           <Form />   
         </FormContext.Provider>

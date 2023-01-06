@@ -2,11 +2,10 @@ import React from 'react';
 
 const Input = () => {
   return (
-    <div>
-      <label htmlFor='participante' className='ingresar-form-label'>Ingresar participante</label>
+    <div className='label-input-container'>
       <input 
         type="text" 
-        placeholder='Nombre del participante' 
+        placeholder='Ingresar participante' 
         className='ingresar-form-input' 
         id='participante'
         data-participante 

@@ -14,11 +14,11 @@
   position: absolute;
   top: 1rem;
   left: 1rem;
-  color: var(--verde);
+  color: var(--distintivo);
 }
 
 .icono-invisible{
-  color: var(--verde);
+  color: var(--distintivo);
   font-size: 2rem;
 }
 
@@ -44,9 +44,16 @@
   justify-content: space-around;
 }
 
+.amigos-invisibles .nombres:nth-child(2n+1){
+  color: aqua;
+}
+
+.amigos-invisibles .nombres:nth-child(2n){
+  color: coral;
+}
+
 .amigos-invisibles .nombre{
   text-align: center;
-  color: var(--verde);
   text-transform: capitalize;
 }
 
@@ -73,7 +80,7 @@
   }
 
   .amigos-invisibles-container a:active{
-    background-color: var(--violeta);
+    background-color: var(--primario);
     color: white;
   }
 }

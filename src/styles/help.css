@@ -10,7 +10,7 @@
 }
 
 .help-icon{
-  color: var(--verde);
+  color: var(--distintivo);
   font-size: 2rem;
 }
 
@@ -38,8 +38,9 @@
 }
 
 .help-container a{
-  color: var(--verde);
+  color: var(--distintivo);
   margin-top: 40px;
+  text-transform: capitalize;
 }
 
 .help-container a:active{
@@ -55,13 +56,13 @@
 @media only screen and (min-width: 992px) {
   .help-container a {
     text-decoration: none;
-    border: 1px solid var(--verde);
+    border: 1px solid var(--distintivo);
     border-radius: 5px;
     padding: 1rem 3rem;
   }
 
   .help-container a:hover{
-    background-color: var(--verde);
+    background-color: var(--distintivo);
     color: white;
   }
 

@@ -30,9 +30,14 @@ const App = () => {
         setVerLista,
       }}>
         <a href="/help"><FiHelpCircle className='help' /></a>
-        <IngresarParticipantes />
-        <Sortear />
-        <VerParticipantes participantes={ participantes } eliminar={ eliminarParticipante } />
+          <h2 className='ingresar-h2'>amigo invisible</h2>
+        <div className="ingresar-participantes-container">
+          <div className="ingresar-sortear-container">
+            <IngresarParticipantes />
+            <VerParticipantes participantes={ participantes } eliminar={ eliminarParticipante } />
+          </div>
+          <Sortear />
+        </div>
       </appContext.Provider>
     </div>
   );
