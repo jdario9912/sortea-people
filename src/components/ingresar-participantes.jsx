@@ -35,11 +35,9 @@ const IngresarParticipantes = () => {
   
   return (
     <div className='ingresar-participantes-container'>
-      <div className='ingresar-participantes'>
-        <FormContext.Provider value={{ handleIngresar, resetStorage}}>
-          <Form />   
-        </FormContext.Provider>
-      </div>
+      <FormContext.Provider value={{ handleIngresar, resetStorage}}>
+        <Form />   
+      </FormContext.Provider>
     </div>
   );
 }

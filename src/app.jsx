@@ -1,8 +1,9 @@
 import React, { useState, createContext } from 'react';
 import IngresarParticipantes from './components/ingresar-participantes';
 import Sortear from './components/sortear';
-import { FiHelpCircle } from "react-icons/fi";
+import { BsInfoCircleFill } from "react-icons/bs";
 import VerParticipantes from './components/ver-participantes';
+import './styles/app.css'
 
 export const appContext = createContext();
 
@@ -28,13 +29,14 @@ const App = () => {
         setSorteado,
         verLista,
         setVerLista,
+        eliminarParticipante
       }}>
-        <a href="/help"><FiHelpCircle className='help' /></a>
+        <a href="/help"><BsInfoCircleFill className='help' /></a>
           <h2 className='ingresar-h2'>amigo invisible</h2>
         <div className="ingresar-participantes-container">
           <div className="ingresar-sortear-container">
             <IngresarParticipantes />
-            <VerParticipantes participantes={ participantes } eliminar={ eliminarParticipante } />
+            <VerParticipantes />
           </div>
           <Sortear />
         </div>

@@ -2,6 +2,8 @@ import React from 'react';
 import { Amigos } from '../models/amigos';
 import '../styles/sorteo.css';
 import { GiInvisible } from "react-icons/gi";
+import { BsArrowLeftSquareFill } from "react-icons/bs";
+// import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
 const Sorteo = () => {
   const amigosInvisibles = [];
@@ -13,16 +15,19 @@ const Sorteo = () => {
   });
 
   participantes.forEach(participante => {
-    const random = Math.floor(Math.random() * amigos.length);
-    
-    amigosInvisibles.push(new Amigos(participante, amigos[random]));
+    let random;
 
-    amigos.splice(random, 1);
+    do {
+      random = Math.floor(Math.random() * amigos.length);
+    } while (participante === amigos[random]);  
+    
+      amigosInvisibles.push(new Amigos(participante, amigos[random]));
+      amigos.splice(random, 1);
   });
 
   return (
     <div className='amigos-invisibles-container'>
-      <a href="/">home</a>
+      <a href="/"><BsArrowLeftSquareFill /></a>
       <GiInvisible className='icono-invisible' />
       <div className="amigos-invisibles">
         <div className="tmain">
@@ -30,9 +35,10 @@ const Sorteo = () => {
           <div className='nombres'>
           {
             amigosInvisibles.map(({entrega}) => 
-              <p className="nombre" key={entrega}>
+              <div className="nombre" key={entrega}>
                 { entrega }
-              </p>
+                {/* <span><HiOutlineArrowNarrowRight /></span> */}
+              </div>
             )
           }
           </div>
@@ -42,9 +48,9 @@ const Sorteo = () => {
           <div className='nombres'>
           {
             amigosInvisibles.map(({recibe}) => 
-              <p className="nombre" key={recibe}>
+              <div className="nombre" key={recibe}>
                 { recibe }
-              </p>
+              </div>
             )
           }
           </div>

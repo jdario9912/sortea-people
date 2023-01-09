@@ -26,7 +26,6 @@
   width: 80%;
   font-size: 1.2rem;
   display: flex;
-  gap: 1rem;
 }
 
 .amigos-invisibles .tmain{
@@ -44,17 +43,23 @@
   justify-content: space-around;
 }
 
-.amigos-invisibles .nombres:nth-child(2n+1){
-  color: aqua;
-}
-
-.amigos-invisibles .nombres:nth-child(2n){
-  color: coral;
-}
-
 .amigos-invisibles .nombre{
   text-align: center;
   text-transform: capitalize;
+  /* border-bottom: 1px solid ; */
+  height: 1.7rem;
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+
+.nombre:nth-child(even){
+  color: var(--distintivo);
+  background-color: rgba(255, 255, 255, 0.728);
+}
+
+.nombre:nth-child(odd){
+  color: var(--distintivo);
+  background-color: rgba(255, 255, 255, 0.323);
 }
 
 @media only screen and (min-width: 768px) { 

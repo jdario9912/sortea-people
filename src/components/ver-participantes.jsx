@@ -4,27 +4,32 @@ import React, {
 } from 'react';
 import { appContext } from '../app';
 
+
 const VerParticipantes = () => {
-  const { setParticipantes, participantes, eliminar } = useContext(appContext);
+  const { setParticipantes, participantes, eliminarParticipante } = useContext(appContext);
 
   useEffect(() => {
     setParticipantes(Object.values(window.sessionStorage));
+    participantes.sort();
   }, []);
 
   if (participantes.length > 0) {
     return(
       <div className='ver-participantes-container'>
-        {
-          participantes.map(participante => 
-            <span 
-              key={ participante } 
-              onClick={ eliminar } 
-              className='lista-nombre'
-            >
-              { participante }
-            </span>  
-          )
-        }
+        <p>Participantes: {participantes.length}</p>
+        <div className="ver-participantes-lista">
+          {
+            participantes.sort().map(participante => 
+              <span 
+                key={ participante } 
+                onClick={ eliminarParticipante } 
+                className='lista-nombre'
+              >
+                { participante }
+              </span>  
+            )
+          }
+        </div>
       </div>
     )
   } else {
