@@ -1,7 +1,7 @@
 import React from 'react';
 import { Amigos } from '../models/amigos';
 import '../styles/sorteo.css';
-import { GiInvisible } from "react-icons/gi";
+import { FaPeopleArrows } from "react-icons/fa";
 import { BsArrowLeftSquareFill } from "react-icons/bs";
 // import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
@@ -28,7 +28,7 @@ const Sorteo = () => {
   return (
     <div className='amigos-invisibles-container'>
       <a href="/"><BsArrowLeftSquareFill /></a>
-      <GiInvisible className='icono-invisible' />
+      <FaPeopleArrows className='icono-invisible' />
       <div className="amigos-invisibles">
         <div className="tmain">
           <div className="thead">Entrega</div>

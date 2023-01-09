@@ -46,20 +46,20 @@
 .amigos-invisibles .nombre{
   text-align: center;
   text-transform: capitalize;
-  /* border-bottom: 1px solid ; */
   height: 1.7rem;
   margin-bottom: 10px;
   padding-top: 10px;
+  overflow: scroll;
 }
 
 .nombre:nth-child(even){
   color: var(--distintivo);
-  background-color: rgba(255, 255, 255, 0.728);
+  background-color: rgba(255, 255, 255, 0.500);
 }
 
 .nombre:nth-child(odd){
   color: var(--distintivo);
-  background-color: rgba(255, 255, 255, 0.323);
+  background-color: rgba(255, 255, 255, 0.300);
 }
 
 @media only screen and (min-width: 768px) { 
