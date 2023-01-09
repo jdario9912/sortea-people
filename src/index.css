@@ -1,7 +1,11 @@
-body {
-  margin: 0;
-  font-family: 'Comfortaa', sans-serif;
-  background: url('./img/bg-app.jpg') repeat center / cover;
+@font-face{
+  font-family: 'Supersonic';
+  src: url("./fonts/Supersonic\ Rocketship.ttf");
+}
+
+@font-face{
+  font-family: 'Comfortaa';
+  src: url("./fonts/Comfortaa-Bold.ttf");
 }
 
 :root{
@@ -11,12 +15,8 @@ body {
   --distintivo: #F08F13;
 }
 
-@font-face{
-  font-family: 'Supersonic';
-  src: url("./fonts/Supersonic\ Rocketship.ttf");
-}
-
-@font-face{
-  font-family: 'Comfortaa';
-  src: url("./fonts/Comfortaa-Bold.ttf");
+body {
+  margin: 0;
+  font-family: 'Comfortaa', sans-serif;
+  background: url('./img/bg-app.jpg') repeat center / cover;
 }

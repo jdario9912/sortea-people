@@ -1,0 +1,40 @@
+.mensaje-comp{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.mensaje-comp a{
+  color: var(--distintivo);
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.mensaje-comp .texto-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.mensaje-comp .icon{
+  color: var(--distintivo);
+  font-size: 2rem;
+}
+
+@media only screen and (min-width: 768px){
+  .mensaje-comp{
+    padding: 3rem;
+  }
+
+  .mensaje-comp a{
+    top: 3rem;
+    left: 3rem;
+  }
+}
