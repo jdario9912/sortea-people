@@ -89,8 +89,7 @@
   }
 
   .amigos-invisibles-container a:active{
-    background-color: var(--primario);
-    color: white;
+    color: var(--primario);
   }
 }
 

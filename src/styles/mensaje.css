@@ -10,10 +10,14 @@
 }
 
 .mensaje-comp a{
-  color: var(--distintivo);
+  color: white;
   position: absolute;
   top: 1rem;
   left: 1rem;
+}
+
+.mensaje-comp a:active{
+  color: var(--distintivo);
 }
 
 .mensaje-comp .texto-container{
