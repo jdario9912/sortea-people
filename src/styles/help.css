@@ -7,6 +7,7 @@
   color: white;
   padding: 1rem;
   box-sizing: border-box;
+  position: relative;
 }
 
 .help-icon{
@@ -38,14 +39,18 @@
 }
 
 .help-container a{
-  color: var(--distintivo);
-  margin-top: 40px;
+  color: white;
   text-transform: capitalize;
   font-family: 'Supersonic';
+  text-decoration: none;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+
 }
 
 .help-container a:active{
-  color: white;
+  color: var(--distintivo);
 }
 
 @media only screen and (min-width: 768px) { 
@@ -56,15 +61,8 @@
 
 @media only screen and (min-width: 992px) {
   .help-container a {
-    text-decoration: none;
-    border: 1px solid var(--distintivo);
-    border-radius: 5px;
-    padding: 1rem 3rem;
-  }
-
-  .help-container a:hover{
-    background-color: var(--distintivo);
-    color: white;
+    top: 3rem;
+    left: 3rem;
   }
 
   .help-container a:active{
