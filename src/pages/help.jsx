@@ -1,11 +1,12 @@
 import React from 'react';
 import '../styles/help.css';
 import { BsInfoCircleFill, BsArrowLeftSquareFill } from "react-icons/bs";
+import { Link } from 'react-router-dom';
 
 const Help = () => {
   return (
     <div className='help-container'>
-      <a href="/"><BsArrowLeftSquareFill /></a>
+      <Link to='/'><BsArrowLeftSquareFill /></Link> 
       <BsInfoCircleFill className='help-icon' />
       <h2>Ayuda</h2>
       <p>Luego de escribir el nombre, pulsa Enter o el boton <i>Agregar</i>.</p>

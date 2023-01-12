@@ -3,7 +3,8 @@ import IngresarParticipantes from './components/ingresar-participantes';
 import Sortear from './components/sortear';
 import { BsInfoCircleFill } from "react-icons/bs";
 import VerParticipantes from './components/ver-participantes';
-import './styles/app.css'
+import './styles/app.css';
+import { Link } from 'react-router-dom';
 
 export const appContext = createContext();
 
@@ -31,7 +32,7 @@ const App = () => {
         setVerLista,
         eliminarParticipante
       }}>
-        <a href="/help"><BsInfoCircleFill className='help' /></a>
+        <Link to="/help"><BsInfoCircleFill className='help' /></Link>
           <h2 className='ingresar-h2'>amigo invisible</h2>
         <div className="ingresar-participantes-container">
           <div className="ingresar-sortear-container">

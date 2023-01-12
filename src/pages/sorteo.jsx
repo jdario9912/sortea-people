@@ -6,6 +6,7 @@ import { BsArrowLeftSquareFill } from "react-icons/bs";
 import Mensaje from '../components/mensaje';
 import ColumnaEntrega from '../components/columna-entrega';
 import ColumnaRecibe from '../components/columna-recibe';
+import { Link } from 'react-router-dom';
 
 const Sorteo = () => {
   const amigosInvisibles = [];
@@ -36,7 +37,7 @@ const Sorteo = () => {
       } else {
         return (
           <div className='amigos-invisibles-container'>
-            <a href="/"><BsArrowLeftSquareFill /></a>
+            <Link to="/"><BsArrowLeftSquareFill /></Link>
             <FaPeopleArrows className='icono-invisible' />
             <div className="amigos-invisibles">
               <ColumnaEntrega amigosInvisibles={ amigosInvisibles } />

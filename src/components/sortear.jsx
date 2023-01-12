@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Sortear = () => {
   
   return (
     <div className='sortear-container-btn'>
-      <a href='/sorteo' className='btn-sortear'>sortear</a>
+      <Link to='/sorteo' className='btn-sortear'>sortear</Link>
     </div>
   );
 }

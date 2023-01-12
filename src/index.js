@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route,
 } from "react-router-dom";
@@ -12,12 +12,11 @@ import Sorteo from './pages/sorteo';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
+  <HashRouter>
     <Routes>
       <Route path='/' element={ <App /> } />
       <Route path='/sorteo' element={ <Sorteo /> } />
       <Route path='/help' element={ <Help /> } />
     </Routes>
-    {/* <App /> */}
-  </BrowserRouter>
+  </HashRouter>
 );
